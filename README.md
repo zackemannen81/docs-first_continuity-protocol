@@ -1,9 +1,10 @@
 # docs-first continuity protocol
 
-Licensed under the Apache License 2.0.
+Open source and licensed under the Apache License 2.0.
 
-This repository is an extraction in progress and should be considered a
-technical preview until a versioned release is published.
+This public repository is an extraction in progress and should be considered
+a technical preview until a versioned release is published. Publication of the
+source is not a protocol release or a conformance claim.
 
 ## The problem, in one story
 

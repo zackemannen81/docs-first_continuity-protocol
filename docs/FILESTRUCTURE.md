@@ -6,6 +6,7 @@ The repository map. Update it in the same change as the structure it describes.
 docs-first_continuity-protocol/
 ├── AGENTS.md                       entry point and operating rules
 ├── README.md                       what this is, for a first-time reader
+├── LICENSE                         Apache License 2.0 for this repository
 ├── docs/
 │   ├── CURRENT_TASK.md             the active task, one per branch
 │   ├── template_CURRENT_TASK.md    the charter form

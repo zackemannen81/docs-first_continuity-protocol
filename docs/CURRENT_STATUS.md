@@ -1,6 +1,6 @@
 # Current Status
 
-Reality as of 2026-08-19. This document describes what exists, not what is
+Reality as of 2026-08-26. This document describes what exists, not what is
 planned. If it disagrees with the code or the tree, this document is wrong and
 must be corrected.
 
@@ -12,6 +12,7 @@ must be corrected.
 | `baseline/README.md` | Provenance: source repository, revision, date, extractor, and what was deliberately not copied |
 | `extraction/ledger.md` | Twenty-eight classified rule groups, plus four rules marked as added hours before extraction |
 | This repository's own docs-first instance | Complete and operating: entry point, active task, workflow, brief, status, system document, journal, file map, identity register, collection indexes |
+| `LICENSE` and public source repository | Open source under the Apache License 2.0; publication is a technical preview, not a versioned protocol release or conformance claim |
 
 ## What does not exist
 
@@ -24,13 +25,16 @@ Nothing below has been started. None of it may be described as available.
 - The conformance validator. This repository is checked by reading it.
 - The profiles: software, creative production, operations, research.
 - The case studies and the evidence report.
-- A license, a name decision, a public repository, a release of any kind.
+- A final name decision or a versioned protocol release.
 
 ## Known gaps and risks
 
 - **The specification does not exist, so conformance cannot be claimed.** This
   repository follows the baseline model; it does not yet conform to a written
   standard, because there is none.
+- **Public open source is not the same as a protocol release.** Apache-2.0 and
+  public availability are settled, while the normative specification,
+  templates, profiles and conformance suite remain absent.
 - **Four rules in the baseline are hours old.** Path stability, collection
   discoverability, tense-aware citation validation and trunk identity claims
   were added on 2026-08-19 in response to real failures, and have not been used
@@ -52,4 +56,6 @@ Nothing below has been started. None of it may be described as available.
 
 - `baseline/` is never edited. Corrections belong in this project's documents.
 - The source repository does not depend on this one. The relation is one way.
-- This repository is private and unlicensed, and is therefore not open source.
+- This repository is public open source under the Apache License 2.0. That
+  distribution decision does not license downstream projects that merely use
+  the protocol and does not imply conformance or a versioned release.

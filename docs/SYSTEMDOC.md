@@ -97,6 +97,8 @@ scoped per branch because that is where version control already enforces it.
 ```text
 docs-first_continuity-protocol/
 ├── AGENTS.md              entry point
+├── README.md              public technical-preview entry point
+├── LICENSE                Apache License 2.0
 ├── docs/                  this repository's own docs-first instance
 ├── baseline/              frozen source model, never edited, never authority
 └── extraction/            classification of baseline rules into this project's

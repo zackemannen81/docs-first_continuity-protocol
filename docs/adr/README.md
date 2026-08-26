@@ -13,5 +13,9 @@ them. They are never deleted, because the reasoning is the point.
 
 ## Records
 
-None yet. The open decisions listed in `docs/PROJECT_BRIEF.md` will each need
-one.
+- `0001-apache-2.0-open-source-distribution.md` — accepted; public open-source
+  distribution under Apache License 2.0, distinct from a versioned protocol
+  release or conformance claim.
+
+The remaining open decisions listed in `docs/PROJECT_BRIEF.md` each need their
+own record when settled.
