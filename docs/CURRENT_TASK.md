@@ -69,8 +69,8 @@ resumability, together with the conformance levels that map onto them.
 - Templates, profiles, the validator, examples, case studies, the evidence
   report. Each is its own task.
 - Editing anything under `baseline/`.
-- Choosing the project name or the license.
-- Making the repository public.
+- Choosing the final project name or changing the accepted Apache-2.0 license.
+- Publishing a versioned protocol release.
 - Simplifying or merging baseline rules. If a rule seems redundant, record the
   observation in `docs/backlog/` rather than dropping it; the model was hardened
   by failures that the text does not always show.
@@ -121,6 +121,10 @@ resumability, together with the conformance levels that map onto them.
 - If a rule cannot be classified confidently as CORE, it is PROFILE. The core
   stays small; a profile rule can be promoted later, but a core rule that turns
   out to be local is expensive to remove.
+- Repository publication and Apache-2.0 licensing were settled outside this
+  task by the owner and are recorded in
+  `docs/adr/0001-apache-2.0-open-source-distribution.md`. DFC-0001 neither
+  chooses nor changes that boundary.
 
 ## Charter Amendment Log
 

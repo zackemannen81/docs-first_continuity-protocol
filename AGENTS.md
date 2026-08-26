@@ -8,7 +8,7 @@ answered its own question.
 
 ## Project Identity
 
-- Project name: docs-first continuity protocol
+- Working project name: docs-first continuity protocol
 - Repository: `docs-first_continuity-protocol`
 - Task identity prefix: `DFC`
 - Purpose: extract the hardened docs-first working model into an
@@ -16,8 +16,9 @@ answered its own question.
   conformance suite.
 - Current phase: bootstrap. The frozen baseline and the extraction ledger
   exist. The specification, templates, profiles and validator do not.
-- Status: private, unlicensed. It is not open source until it has an
-  OSI-approved license, and saying otherwise would be inaccurate.
+- Status: public open-source technical preview, licensed under the Apache
+  License 2.0. Public availability does not imply a versioned protocol release
+  or a conformance claim.
 
 ## Start Here
 
@@ -131,5 +132,7 @@ sounds reasonable. That obligation applies to the repository itself.
 ## Safety
 
 - Never commit credentials, personal data or client material.
-- The repository stays private until a license and a name are decided.
-- Publication, releases and announcements require explicit approval.
+- The repository is public and licensed under Apache-2.0. Private source
+  material, credentials and personal data remain prohibited.
+- New releases, announcements and other external effects require explicit
+  approval.

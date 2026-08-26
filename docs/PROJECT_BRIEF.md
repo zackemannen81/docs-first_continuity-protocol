@@ -16,6 +16,15 @@ The distribution has three separable parts:
 2. reference templates that implement it; and
 3. a conformance suite that tests behaviour rather than the presence of files.
 
+## Distribution status
+
+The repository is public open source under the Apache License 2.0, as recorded
+in `docs/adr/0001-apache-2.0-open-source-distribution.md`.
+
+This is source publication of a technical preview. It does not claim that the
+unwritten specification, templates, profiles or conformance suite exist, and
+it is not a versioned protocol release.
+
 ## The problem
 
 Long-running work loses continuity because the knowledge that matters is spread
@@ -88,7 +97,5 @@ The evidence report will publish its counting method before its counts.
 These are not decided, and no task may assume them:
 
 1. The project name, after trademark and registry checks.
-2. The license.
-3. Whether filenames are normative or only semantic roles are.
-4. Which case-study excerpts may be published, and with whose consent.
-5. When the repository becomes public.
+2. Whether filenames are normative or only semantic roles are.
+3. Which case-study excerpts may be published, and with whose consent.
