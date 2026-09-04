@@ -2,11 +2,11 @@
 
 Task ID: DFC-0002
 Parent Task: None
-Status: Draft
+Status: Ready
 Owner: Codex
 Created: 2026-09-05
 Last updated: 2026-09-05
-Charter frozen at:
+Charter frozen at: 2026-09-05
 
 ## Read First
 
@@ -78,7 +78,7 @@ necessity gate and verified examples of its application.
 ### Necessity Gate
 
 Contract: `docs/PROJECT_BRIEF.md`, Core Contract
-Contract revision: pending commit of the owner-authorized contract before Ready.
+Contract revision: `6bd0a8ae0787c441a87576403ce4ac264663580f`.
 Accepted constraint: ADR 0002 records the owner's instruction to implement
 only changes that pass the necessity gate; no extra pilot prerequisite.
 
@@ -106,7 +106,7 @@ only changes that pass the necessity gate; no extra pilot prerequisite.
 ## Checklist
 
 - [x] Recheck main and archive; claim DFC-0002 on local main and integrate it.
-- [ ] Record the accepted contract and pin its committed revision before Ready.
+- [x] Record the accepted contract and pin its committed revision before Ready.
 - [ ] Freeze this bounded charter and implement the operating-document changes.
 - [ ] Review scenarios, ownership, references and preserved history.
 - [ ] Update durable records, archive DFC-0002 and restore DFC-0001 as Draft.
@@ -144,9 +144,9 @@ runtime tests or evidence of improved agent behavior.
 
 ## Handoff and Follow-ups
 
-- Current state: adoption charter drafted; DFC-0001 retained in preparation commit.
-- Next step: commit and pin the approved contract, freeze this charter and
-  implement the gate in the existing working documents.
+- Current state: Ready; contract accepted and pinned, identity on local main,
+  DFC-0001 retained in the preparation commit.
+- Next step: implement the gate in the existing working documents.
 - Blockers: none for local adoption.
 - Child tasks: none.
 - Resume condition: not applicable.
