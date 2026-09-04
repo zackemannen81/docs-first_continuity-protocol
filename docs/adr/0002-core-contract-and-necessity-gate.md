@@ -1,10 +1,15 @@
 # ADR 0002 — Core contract and necessity gate
 
-Status: Proposed
+Status: Accepted
 
 Date: 2026-09-05
 Prepared by: Codex
-Decision owner: project owner; acceptance not recorded.
+Decision owner: project owner
+
+Approval: on 2026-09-05 the owner instructed implementation if the proposed
+work would pass the necessity gate. The contract, operating rule, template and
+bounded verification meet that condition. A separate pilot phase does not
+establish a necessary outcome and is excluded from this decision.
 
 ## Context
 
@@ -16,11 +21,13 @@ The approved bootstrap direction is extraction by transcription. DFC-0001 must
 preserve baseline provenance; a new rule needs an explicit decision and its own
 evidence rather than being presented as an extracted rule.
 
-## Proposed decision
+## Decision
 
-Trial a **Core Contract** and **Necessity Gate** locally. The
+Adopt a **Core Contract** and **Necessity Gate** in this repository's working
+documents. The
 [implementation proposal](../backlog/core-contract-and-implementation-gate.md)
-contains adoption text, a candidate contract, template insertion and scenarios.
+records preparation and scenario fixtures. The brief owns the adopted contract;
+the workflow owns the gate. The proposal is not a second authority.
 
 - Keep the short contract in the document owning approved direction: a section
   of this repository's project brief, not a second owner or a copy per task.
@@ -34,8 +41,10 @@ contains adoption text, a candidate contract, template insertion and scenarios.
   existing code or filled fields cannot supply product authority.
 - Store arguments in the task charter and results in Verification. Revalidate
   on material changes and review the actual diff before completion.
-- Keep baseline extraction separate. Evaluate this new rule locally and later
-  as an opt-in extension before considering core promotion or maturity claims.
+- Keep baseline extraction separate. This is a new operating rule with bounded
+  verification, not evidence of long-term effectiveness. Adoption is effective
+  when the working documents are updated; no separate pilot or evidence
+  programme is required before it applies.
 
 ## Alternatives considered
 
@@ -49,11 +58,11 @@ contains adoption text, a candidate contract, template insertion and scenarios.
 
 ## Consequences
 
-If accepted, update the brief, entry point, workflow and local task template in
-one bounded adoption task. Review both rejection of invented needs and
-acceptance of legitimate maintenance and non-software work. Record mistaken
-rejections and administrative burden before claiming effectiveness.
+Update the brief, entry point, workflow and local task template in DFC-0002.
+Review both rejection of invented needs and acceptance of legitimate maintenance
+and non-software work. Record actual checks and omissions without claiming
+effectiveness beyond the evidence. Existing safety and external-effect rules
+continue to apply.
 
-This record is Proposed until explicitly accepted. It does not settle normative
-filenames, change licensing, edit the baseline, activate implementation or
-authorize external publication.
+This decision does not settle normative filenames, change licensing, edit the
+baseline, specify distribution packaging or authorize external publication.

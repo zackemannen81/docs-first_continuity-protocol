@@ -17,8 +17,8 @@ them. They are never deleted, because the reasoning is the point.
   distribution under Apache License 2.0, distinct from a versioned protocol
   release or conformance claim.
 - [`0002-core-contract-and-necessity-gate.md`](0002-core-contract-and-necessity-gate.md)
-  — proposed; trial a core contract and necessity gate locally while preserving
-  baseline provenance and distinguishing new-rule evidence.
+  — accepted; adopt a core contract and necessity gate in the working documents,
+  with separate provenance and no mandatory pilot phase.
 
 The remaining open decisions listed in `docs/PROJECT_BRIEF.md` each need their
 own record when settled.
