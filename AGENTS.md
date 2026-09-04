@@ -40,7 +40,7 @@ boundary.
 
 - `docs/CURRENT_TASK.md`: the active task. One per branch.
 - `docs/TASK_WORKFLOW.md`: task states, scope freeze, routing, identity.
-- `docs/PROJECT_BRIEF.md`: approved direction and fixed scope.
+- `docs/PROJECT_BRIEF.md`: approved direction, core contract and fixed scope.
 - `docs/CURRENT_STATUS.md`: what exists now and what does not.
 - `docs/SYSTEMDOC.md`: the durable shape of the protocol and this repository.
 - `docs/JOURNAL.md`: dated, signed work waves. Append-only.
@@ -67,6 +67,16 @@ boundary.
 - Fill `docs/CURRENT_TASK.md` from `docs/template_CURRENT_TASK.md` with goal,
   deliverable, scope, out-of-scope, definition of done and verification gates.
 - Freeze the charter when status changes from `Draft` to `Ready`.
+
+### Necessity gate
+
+Before Ready and before substantive implementation, apply the Necessity Gate in
+`docs/TASK_WORKFLOW.md` against the Core Contract in `docs/PROJECT_BRIEF.md`.
+Record the exact clause, observable necessity, smallest sufficient change and
+verification in the task. A change must pass this gate and fit the frozen
+charter. Missing necessity means do not implement the affected change; use the
+existing routing rules. Recheck material changes and the final diff as the
+workflow requires.
 
 ### During work
 

@@ -9,9 +9,9 @@ docs-first_continuity-protocol/
 ├── LICENSE                         Apache License 2.0 for this repository
 ├── docs/
 │   ├── CURRENT_TASK.md             the active task, one per branch
-│   ├── template_CURRENT_TASK.md    the charter form
-│   ├── TASK_WORKFLOW.md            states, freeze, routing, identity
-│   ├── PROJECT_BRIEF.md            approved direction and non-goals
+│   ├── template_CURRENT_TASK.md    charter form with necessity arguments
+│   ├── TASK_WORKFLOW.md            states, necessity gate, freeze, routing, identity
+│   ├── PROJECT_BRIEF.md            core contract, direction and non-goals
 │   ├── CONTRIBUTING.md             how work is done here
 │   ├── CURRENT_STATUS.md           what exists now, and the gaps
 │   ├── SYSTEMDOC.md                the durable shape of the protocol
@@ -21,12 +21,14 @@ docs-first_continuity-protocol/
 │   ├── adr/                        decisions
 │   │   ├── README.md               decision index and status
 │   │   ├── 0001-apache-2.0-open-source-distribution.md
-│   │   └── 0002-core-contract-and-necessity-gate.md  proposed local trial
+│   │   └── 0002-core-contract-and-necessity-gate.md  accepted adoption
 │   ├── backlog/                    non-activated proposals
 │   │   ├── README.md               proposal index and status
-│   │   └── core-contract-and-implementation-gate.md  definition and adoption plan
+│   │   └── core-contract-and-implementation-gate.md  provenance and review fixtures
 │   ├── paused/                     frozen parents awaiting a condition
 │   ├── finished/                   archived tasks, immutable
+│   │   ├── README.md               archive naming convention
+│   │   └── DFC-0002_core-contract-and-necessity-gate.md  completed adoption
 │   └── concepts_sandbox/           excluded ideas, never authority
 ├── baseline/
 │   ├── README.md                   provenance and what was not copied

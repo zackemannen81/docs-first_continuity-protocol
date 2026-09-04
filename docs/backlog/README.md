@@ -18,4 +18,4 @@ Assign a `DFC-NNNN` identity only when a proposal is explicitly activated.
 
 | Proposal | Status | Outcome |
 | --- | --- | --- |
-| [Core contract and necessity gate](core-contract-and-implementation-gate.md) | Proposed | Definition, candidate contract, acceptance scenarios and bounded local adoption plan. |
+| [Core contract and necessity gate](core-contract-and-implementation-gate.md) | Implemented | DFC-0002 adopted the contract and gate; this record retains provenance and review fixtures. |

@@ -12,4 +12,5 @@ what was produced and what was verified, at the time. Current behaviour lives in
 Cancelled and superseded tasks are archived here too, with their final status
 and a link to whatever replaced them.
 
-No tasks are archived yet.
+Completed and otherwise finalized tasks are retained here under the naming
+convention above.

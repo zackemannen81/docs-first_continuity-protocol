@@ -13,7 +13,9 @@ must be corrected.
 | `extraction/ledger.md` | Twenty-eight classified rule groups, plus four rules marked as added hours before extraction |
 | This repository's own docs-first instance | Complete and operating: entry point, active task, workflow, brief, status, system document, journal, file map, identity register, collection indexes |
 | `LICENSE` and public source repository | Open source under the Apache License 2.0; publication is a technical preview, not a versioned protocol release or conformance claim |
-| `docs/backlog/core-contract-and-implementation-gate.md` and proposed ADR 0002 | Definition, candidate contract, gate text, twelve synthetic acceptance cases and adoption plan; the gate has not been adopted |
+| Core Contract in `docs/PROJECT_BRIEF.md`, accepted ADR 0002 | Approved current outcomes with stable local CC-01 through CC-05 references; provenance distinct from baseline extraction |
+| Necessity Gate in `docs/TASK_WORKFLOW.md` and the local task template | Adopted operating rule: changes require contract necessity and task scope, with checks before Ready, on material changes and at completion |
+| `docs/finished/DFC-0002_core-contract-and-necessity-gate.md` | Completed adoption, with necessity arguments, twelve manual scenario verdicts and bounded documentation verification; self-review, not runtime or independent adoption evidence |
 
 ## What does not exist
 
@@ -26,12 +28,14 @@ The following deliverables or capabilities are not available.
 - The conformance validator. This repository is checked by reading it.
 - The profiles: software, creative production, operations, research.
 - The case studies and the evidence report.
-- An adopted core contract or necessity gate. The proposal is preparation,
-  not a change to the current workflow or a released extension.
 - A final name decision or a versioned protocol release.
 
 ## Known gaps and risks
 
+- **The new gate has no long-term effectiveness evidence.** DFC-0002 verifies
+  its documentation and synthetic review cases; this is not an independent
+  newcomer test or evidence that agents reliably obey it. The rule applies now
+  without a separate pilot prerequisite.
 - **The specification does not exist, so conformance cannot be claimed.** This
   repository follows the baseline model; it does not yet conform to a written
   standard, because there is none.

@@ -4,6 +4,48 @@ Newest first. Append only: entries are never edited or reflowed, because other
 records cite them and because their value is that they record what was believed
 at the time.
 
+## 2026-09-05 — DFC-0002: core contract and necessity gate adopted
+
+- Date: 2026-09-05
+- Author: Codex
+- Task: DFC-0002
+- Branch: `codex/dfc-0002-necessity-gate`
+- Owner authority: implement the proposed work if it would pass the necessity
+  gate. The contract, workflow, template and bounded verification passed that
+  test. The previously proposed separate pilot phase supplied no necessary
+  outcome and was excluded.
+- Decision: `docs/adr/0002-core-contract-and-necessity-gate.md` is Accepted.
+  The Core Contract in `docs/PROJECT_BRIEF.md` owns CC-01 through CC-05, and
+  `docs/TASK_WORKFLOW.md` owns the required gate. The entry point, contribution
+  loop and local task template route to those owners. The resolved proposal
+  keeps its path and fixture IDs, and points to current authority.
+- Continuity: `docs/finished/DFC-0002_core-contract-and-necessity-gate.md`
+  records the completed task, its own necessity arguments, twelve actual manual
+  review verdicts and verification limits. DFC-0001 is restored as Draft with
+  a necessity gate; its original transcription goal, scope, done conditions and
+  verification gates are preserved. Its previously identified bootstrap gaps
+  remain outside this adoption.
+- Verification: live Markdown references and anchors, fences, collection
+  discoverability, clause IDs and fixture/result pairs passed ad hoc checks;
+  the actual changes were manually mapped to the three necessity arguments.
+  The frozen charter matched `3b21113` apart from completed checkboxes, and the
+  approved contract and ADR matched `6bd0a8a`. Frozen baseline, extraction and
+  accepted ADR 0001 remained unchanged; earlier journal entries were preserved.
+  `git diff 6b59508 --check` and new-file whitespace checks passed. The
+  repository-only handoff walkthrough was performed by the implementing actor.
+- Identity and Git: preparation is preserved in `f7ec301`; DFC-0002 was claimed
+  in `3c9fe46` on local main before Ready and integrated into the work branch.
+  Origin main was read at `6b59508`, but the identity claim has not been
+  published remotely. Reconcile with shared main before a future push; local
+  allocation is not evidence of remote visibility or collision protection.
+- Not verified: independent newcomer behavior, runtime behavior, long-term
+  effectiveness or protocol conformance. No pilot programme, validator,
+  runtime, push, release or announcement was added or performed.
+- Handoff: the gate applies now in the working documents. Continue the separate
+  Draft specification task when ready; no additional pilot approval is needed
+  for this rule to operate.
+- Signature: Codex
+
 ## 2026-09-05 — Core contract evolution prepared
 
 - Date: 2026-09-05
