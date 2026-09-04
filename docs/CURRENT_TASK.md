@@ -5,7 +5,7 @@ Parent Task: None
 Status: Draft
 Owner: unassigned
 Created: 2026-08-19
-Last updated: 2026-08-19
+Last updated: 2026-09-05
 Charter frozen at:
 
 ## Read First
@@ -101,7 +101,8 @@ resumability, together with the conformance levels that map onto them.
 
 ## Checklist
 
-- [ ] Claim DFC-0001 on `main` before freezing this charter
+- [x] Confirm DFC-0001 is claimed on `main` before freezing this charter
+      (verified at `6b59508` on 2026-09-05; owner remains unassigned)
 - [ ] Draft the requirement groups and identifiers
 - [ ] Write one requirement per CORE ledger row
 - [ ] Assign checking means to each requirement
@@ -113,6 +114,11 @@ resumability, together with the conformance levels that map onto them.
 
 ## Decisions and Notes
 
+- Owner-requested preparation on 2026-09-05: define a core contract and a
+  necessity gate for future changes. This is an evolution beyond baseline
+  transcription, so the reviewable design is routed to
+  `docs/backlog/core-contract-and-implementation-gate.md`. Preparing that
+  proposal does not activate its implementation or change this charter.
 - Transcription, not redesign. A rewrite from memory keeps the parts that read
   well and drops the failure knowledge that is the actual value.
 - Requirement identifiers are permanent. They will appear in conformance output,
@@ -148,17 +154,29 @@ Only non-semantic corrections are allowed after `Ready`.
 
 ## Handoff and Follow-ups
 
-- Current state: Draft. Nothing written yet. The baseline and the ledger are in
-  place, so this task has everything it needs to start.
+- Current state: Draft. The specification has not been written. Owner-requested
+  preparation of a separate core-contract proposal is under review; it does not
+  supply normative requirements for this transcription task.
 - Next recommended step: read `extraction/ledger.md` end to end before writing
   anything, and check whether the CORE set is coherent as a whole rather than
   requirement by requirement.
-- Blockers: none.
+- Blockers: none for proposal preparation; resolve the pre-freeze
+  inconsistencies below before moving the specification charter to Ready.
 - Child tasks: none.
+- Follow-up: the core-contract proposal records its own definition, adoption
+  sequence and acceptance scenarios. Review it as a separate evolution, keeping
+  the evidence and requirement mapping of DFC-0001 intact.
 - Resume condition: not applicable.
 - Open questions: whether filenames are normative or only semantic roles are.
   The answer changes whether a renamed template breaks conformance, and it is
   listed as an open decision in `docs/PROJECT_BRIEF.md`.
+- Pre-freeze reconciliation: the ledger has twenty CORE rows, including shared
+  C-07 and C-18 destinations and a C-13/C-14 split, while this Draft charter
+  requires one row per requirement. Resolve the mapping while the charter is
+  editable. Also reconcile the open filename decision with the system document's
+  assertion that roles are normative, and the identity register's allocation-only
+  rule with its existing `Work` column. These are existing bootstrap gaps, not
+  evidence that the proposed necessity gate has been adopted.
 
 ## Finalize When Complete
 

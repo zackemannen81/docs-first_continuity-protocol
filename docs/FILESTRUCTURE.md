@@ -19,7 +19,12 @@ docs-first_continuity-protocol/
 │   ├── FILESTRUCTURE.md            this file
 │   ├── TASK_IDS.md                 identity claims, allocation only
 │   ├── adr/                        decisions
+│   │   ├── README.md               decision index and status
+│   │   ├── 0001-apache-2.0-open-source-distribution.md
+│   │   └── 0002-core-contract-and-necessity-gate.md  proposed local trial
 │   ├── backlog/                    non-activated proposals
+│   │   ├── README.md               proposal index and status
+│   │   └── core-contract-and-implementation-gate.md  definition and adoption plan
 │   ├── paused/                     frozen parents awaiting a condition
 │   ├── finished/                   archived tasks, immutable
 │   └── concepts_sandbox/           excluded ideas, never authority

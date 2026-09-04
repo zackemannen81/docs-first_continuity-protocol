@@ -114,3 +114,12 @@ Three levels coexist and must not be confused:
 
 Once templates exist they will form a fourth level: shipped artefacts carrying
 placeholders, validated in template mode rather than as live state.
+
+## Prepared evolution
+
+`docs/backlog/core-contract-and-implementation-gate.md` contains a proposed
+core contract and necessity gate, with the decision boundary in
+`docs/adr/0002-core-contract-and-necessity-gate.md` (Proposed). These are
+discoverable preparation artifacts. They do not change the operating workflow
+or add normative requirements. Ownership and adoption changes remain proposed
+until accepted and implemented.

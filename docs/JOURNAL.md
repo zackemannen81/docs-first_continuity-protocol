@@ -4,6 +4,50 @@ Newest first. Append only: entries are never edited or reflowed, because other
 records cite them and because their value is that they record what was believed
 at the time.
 
+## 2026-09-05 — Core contract evolution prepared
+
+- Date: 2026-09-05
+- Author: Codex
+- Task: owner-requested preparation of a first protocol evolution. No new DFC
+  identity was allocated and no implementation task was activated. DFC-0001
+  remains the Draft baseline-specification task; its charter was not redefined.
+- Branch: `codex/core-contract-preparation`, from `6b59508`.
+- Change: `docs/backlog/core-contract-and-implementation-gate.md` defines a
+  proposed Core Contract and Necessity Gate, with a candidate contract, compact
+  task-template insertion, twelve synthetic acceptance cases and a bounded
+  local adoption charter. `docs/adr/0002-core-contract-and-necessity-gate.md`
+  records the proposed decision. Both collections index their new member and
+  its Proposed state. Current task, status, system document and file map now
+  expose the preparation and its next step.
+- Design: keep the contract with approved direction; record clause, observable
+  necessity, smallest sufficient approach and verification in the task. Both
+  contract necessity and frozen task scope must permit a substantive change.
+  Adoption starts locally, with separate new-rule evidence and no change to
+  baseline extraction.
+- Existing gaps: the specification charter's one-to-one requirement mapping
+  conflicts with shared/split ledger destinations; the brief and system document
+  disagree about whether semantic roles versus filenames are decided; the
+  identity register contains a Work column despite its allocation-only rule.
+  These are recorded for pre-freeze reconciliation. DFC-0001's identity is
+  already present on main at `6b59508`; its checklist now reflects that fact.
+- Verification: all 22 live Markdown files passed an ad hoc fence check; all
+  five relative Markdown links resolved. New collection entries and Status
+  lines, twelve unique scenario IDs and five candidate clause IDs were checked.
+  New inline path references and expected scenario verdicts were manually
+  reviewed. `git diff --check` passed, with new-file whitespace checked
+  separately. The frozen baseline, extraction ledger, accepted ADR, identity
+  register and existing operating rules were unchanged against HEAD; earlier
+  journal entries were preserved byte for byte.
+- Not verified: effectiveness in real adoption, an independent newcomer
+  handoff, source-project runtime claims or protocol conformance. Acceptance
+  cases are proposed review fixtures, not executed product tests. The frozen
+  baseline's unresolved source links remain excluded from link checking.
+- Handoff: review the proposed decision and candidate contract, then activate
+  bounded local adoption if accepted. Claim its identity on main before Ready;
+  preserve DFC-0001 as the separate extraction task. No commit, push, release
+  or announcement was performed.
+- Signature: Codex
+
 ## 2026-08-26 — Apache-2.0 open-source status reconciled
 
 - Date: 2026-08-26

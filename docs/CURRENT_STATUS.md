@@ -1,6 +1,6 @@
 # Current Status
 
-Reality as of 2026-08-26. This document describes what exists, not what is
+Reality as of 2026-09-05. This document describes what exists, not what is
 planned. If it disagrees with the code or the tree, this document is wrong and
 must be corrected.
 
@@ -13,10 +13,11 @@ must be corrected.
 | `extraction/ledger.md` | Twenty-eight classified rule groups, plus four rules marked as added hours before extraction |
 | This repository's own docs-first instance | Complete and operating: entry point, active task, workflow, brief, status, system document, journal, file map, identity register, collection indexes |
 | `LICENSE` and public source repository | Open source under the Apache License 2.0; publication is a technical preview, not a versioned protocol release or conformance claim |
+| `docs/backlog/core-contract-and-implementation-gate.md` and proposed ADR 0002 | Definition, candidate contract, gate text, twelve synthetic acceptance cases and adoption plan; the gate has not been adopted |
 
 ## What does not exist
 
-Nothing below has been started. None of it may be described as available.
+The following deliverables or capabilities are not available.
 
 - The specification. No requirement is normative yet; `extraction/ledger.md`
   names intended destinations such as C-01, but those requirements are not
@@ -25,6 +26,8 @@ Nothing below has been started. None of it may be described as available.
 - The conformance validator. This repository is checked by reading it.
 - The profiles: software, creative production, operations, research.
 - The case studies and the evidence report.
+- An adopted core contract or necessity gate. The proposal is preparation,
+  not a change to the current workflow or a released extension.
 - A final name decision or a versioned protocol release.
 
 ## Known gaps and risks
