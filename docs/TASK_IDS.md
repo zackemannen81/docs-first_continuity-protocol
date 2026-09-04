@@ -29,3 +29,4 @@ by records that cannot be edited.
 | Task ID | Title | Owner | Claimed | Work |
 | --- | --- | --- | --- | --- |
 | DFC-0001 | protocol specification, C-01 to C-18 | unassigned | 2026-08-19 | not started |
+| DFC-0002 | core contract and necessity gate | Codex | 2026-09-05 | — |
