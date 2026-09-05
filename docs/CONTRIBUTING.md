@@ -14,9 +14,11 @@ issue title alone.
 
 1. Claim an identity in `docs/TASK_IDS.md` and merge the claim to `main`.
 2. Fill `docs/CURRENT_TASK.md` from the template.
-3. Move it to `Ready`, which freezes the charter.
+3. Apply the Necessity Gate in `docs/TASK_WORKFLOW.md` to the Core Contract
+   in `docs/PROJECT_BRIEF.md`, then move the task to `Ready` to freeze it.
 4. Work the checklist, keeping it truthful as you go.
-5. Verify in proportion to risk, and state what you did not verify.
+5. Review actual changes against the gate and charter, verify in proportion to
+   risk, and state what you did not verify.
 6. Update every affected owning document in the same change.
 7. Archive the task and add a signed journal entry.
 

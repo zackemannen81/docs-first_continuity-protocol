@@ -16,6 +16,43 @@ The distribution has three separable parts:
 2. reference templates that implement it; and
 3. a conformance suite that tests behaviour rather than the presence of files.
 
+## Core Contract
+
+Approved on 2026-09-05 by the project owner through
+`docs/adr/0002-core-contract-and-necessity-gate.md`. This section owns the
+current required outcomes; status reports what has actually been implemented.
+Clause IDs are local to this repository, stable, and never reused for a
+different meaning. They are not the baseline specification's C-series IDs.
+
+The docs-first continuity protocol keeps long-running work resumable by placing
+approved purpose, current state, decisions and next action in repository-owned
+records another competent actor can find and use.
+
+- **CC-01 — Find the authority.** From the entry point, find the active task
+  and its relevant owning records; distinguish approved direction, current
+  reality, history and undecided material.
+- **CC-02 — Keep work necessary and bounded.** Changes serve the current
+  approved purpose. Each branch holds at most one active task; its charter
+  remains fixed after Ready. Discoveries receive an explicit route instead of
+  silently changing the agreed outcome.
+- **CC-03 — Leave a usable handoff.** Record changes, verification and omissions,
+  remaining work and any resume condition, so a competent successor can
+  continue without private conversation history.
+- **CC-04 — Preserve retrieval.** Cited records retain their addresses, and
+  collection members remain discoverable under declared conventions.
+- **CC-05 — Make claims inspectable.** Rules and conformance claims identify
+  their origin and checking means; observed use, inference and new hypotheses
+  remain distinguishable.
+
+The core remains agent-neutral and domain-neutral. Its intended distribution
+comprises the specification, reference templates and conformance suite described
+above. This project does not build a runtime framework or claim that adopting
+the protocol makes agents more capable. Future aspirations do not authorize
+current changes. Accepted constraints may refine a clause; new required
+behavior needs an explicit direction decision before dependent implementation.
+
+The necessity gate in `docs/TASK_WORKFLOW.md` applies these outcomes to work.
+
 ## Distribution status
 
 The repository is public open source under the Apache License 2.0, as recorded
@@ -62,6 +99,8 @@ and what is explicitly out of scope.
 
 - Extract the hardened model as it stands, by transcription rather than
   redesign.
+- Apply the approved core contract and necessity gate in this repository's
+  working documents under ADR 0002, with provenance separate from extraction.
 - Keep the core small, domain-neutral and agent-neutral.
 - Make conformance testable, in levels, rather than a badge.
 - Publish evidence honestly, separating what was observed from what is inferred.

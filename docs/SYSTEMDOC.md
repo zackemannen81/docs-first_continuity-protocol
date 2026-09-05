@@ -10,6 +10,7 @@ private actor context
   → explicit repository state
   → one bounded active task
   → only the authority that task names
+  → contract necessity and frozen task scope both permit the change
   → work and verification
   → durable status, decision and handoff
   → next actor resumes without the previous actor's memory
@@ -30,7 +31,7 @@ exact mapping.
 | Entry and guardrails | `AGENTS.md` | Reading order, safety, operating rules |
 | Active work | `docs/CURRENT_TASK.md` | One task's frozen charter, progress, verification, handoff |
 | Task state machine | `docs/TASK_WORKFLOW.md` | States, freeze, routing, identity |
-| Approved direction | `docs/PROJECT_BRIEF.md` | Purpose, goals, non-goals |
+| Approved direction | `docs/PROJECT_BRIEF.md` | Core contract, purpose, goals, non-goals |
 | Current reality | `docs/CURRENT_STATUS.md` | What exists now, and the gaps |
 | Durable system model | `docs/SYSTEMDOC.md` | This document |
 | Work history | `docs/JOURNAL.md` | Dated, signed evidence of work waves |
@@ -114,3 +115,22 @@ Three levels coexist and must not be confused:
 
 Once templates exist they will form a fourth level: shipped artefacts carrying
 placeholders, validated in template mode rather than as live state.
+
+## Core contract and necessity gate
+
+The Core Contract in `docs/PROJECT_BRIEF.md` owns current required outcomes;
+`docs/TASK_WORKFLOW.md` owns the gate applying them to substantive changes.
+`AGENTS.md` and contribution guidance route to those owners. The task template
+records necessity arguments inside the charter and results in Verification.
+
+This is an adopted operating rule under
+`docs/adr/0002-core-contract-and-necessity-gate.md`. Its local CC identifiers are
+distinct from intended baseline C-series requirements. The gate requires both
+product necessity and frozen task scope, with revalidation for material changes
+and final review of the actual changes. Filled fields do not prove semantics.
+There is no new runtime, lifecycle state or mandatory pilot phase.
+
+`docs/backlog/core-contract-and-implementation-gate.md` retains preparation
+provenance and synthetic review fixtures; it is not a second owner of the rule.
+Baseline extraction, distribution packaging and evidence of long-term
+effectiveness remain separate from this operating change.

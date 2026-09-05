@@ -51,6 +51,20 @@ Name the concrete artifact or behavior that completes the task.
 
 - Define objective, verifiable completion conditions.
 
+### Necessity Gate
+
+Contract: `docs/PROJECT_BRIEF.md`, Core Contract
+Contract revision: <Git commit containing the reviewed contract>
+
+One row per coherent change or group serving one outcome. Apply the Necessity
+Gate in `docs/TASK_WORKFLOW.md`; results belong in Verification. References,
+intended outcomes and planned checks freeze with the charter. Record refinements
+of the initial approach in mutable notes within those bounds.
+
+| Change | Clause and accepted constraint | Outcome; consequence if omitted | Smallest sufficient change | Planned check |
+| --- | --- | --- | --- | --- |
+| <coherent change> | <exact reference> | <enable / fix / protect / verify; concrete consequence> | <bounded approach> | <test or named review> |
+
 ### Minimum Verification Gates
 
 - [ ] Define checks that may be strengthened but not removed after `Ready`.
@@ -78,6 +92,8 @@ Only non-semantic corrections are allowed after `Ready`.
 
 ## Verification
 
+- [ ] Review actual changes against the necessity arguments and frozen charter;
+      record any revalidation after a contract or material approach change.
 - [ ] Define task-appropriate technical checks.
 - [ ] Define manual or scenario validation when relevant.
 - [ ] Document skipped checks and reasons.

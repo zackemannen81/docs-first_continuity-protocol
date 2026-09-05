@@ -5,7 +5,7 @@ Parent Task: None
 Status: Draft
 Owner: unassigned
 Created: 2026-08-19
-Last updated: 2026-08-19
+Last updated: 2026-09-05
 Charter frozen at:
 
 ## Read First
@@ -85,6 +85,20 @@ resumability, together with the conformance levels that map onto them.
 - `docs/CURRENT_STATUS.md` no longer says the specification does not exist.
 - `docs/JOURNAL.md` has a signed entry and this task is archived.
 
+### Necessity Gate
+
+Contract: `docs/PROJECT_BRIEF.md`, Core Contract
+Contract revision: `6bd0a8ae0787c441a87576403ce4ac264663580f`.
+
+This Draft must be revalidated before Ready under `docs/TASK_WORKFLOW.md`.
+The original baseline-transcription goals and boundaries are unchanged; this
+section adds the operating requirement adopted in DFC-0002.
+
+| Change | Clause and accepted constraint | Outcome; consequence if omitted | Smallest sufficient change | Planned check |
+| --- | --- | --- | --- | --- |
+| Transcribe the CORE ledger into the specification | CC-05; baseline provenance and the existing transcription charter | Make each requirement's origin and checking means inspectable; without the specification conformance cannot be evaluated | Numbered text and bidirectional ledger mapping, with no new rules presented as baseline extraction | Review ledger/specification mapping, checking means and conformance coverage |
+| Record the verified result and handoff | CC-01, CC-03, CC-04 | Keep availability, location and remaining work accurate; otherwise a successor cannot distinguish delivered requirements from plans | Update the existing owning documents, journal and task archive | Reference/fence review, final diff review and named verification omissions |
+
 ### Minimum Verification Gates
 
 - [ ] Every CORE ledger row maps to exactly one requirement, checked by reading
@@ -101,7 +115,9 @@ resumability, together with the conformance levels that map onto them.
 
 ## Checklist
 
-- [ ] Claim DFC-0001 on `main` before freezing this charter
+- [x] Confirm DFC-0001 is claimed on `main` before freezing this charter
+      (verified at `6b59508` on 2026-09-05; owner remains unassigned)
+- [ ] Revalidate the Necessity Gate and resolve the recorded pre-freeze gaps
 - [ ] Draft the requirement groups and identifiers
 - [ ] Write one requirement per CORE ledger row
 - [ ] Assign checking means to each requirement
@@ -113,6 +129,11 @@ resumability, together with the conformance levels that map onto them.
 
 ## Decisions and Notes
 
+- DFC-0002 adopted the Core Contract and Necessity Gate under accepted ADR
+  0002. Its completed record is
+  `docs/finished/DFC-0002_core-contract-and-necessity-gate.md`. Apply the gate
+  before this Draft becomes Ready. The new operating rule is not an extracted
+  requirement and must not be inserted into the baseline ledger as one.
 - Transcription, not redesign. A rewrite from memory keeps the parts that read
   well and drops the failure knowledge that is the actual value.
 - Requirement identifiers are permanent. They will appear in conformance output,
@@ -148,17 +169,25 @@ Only non-semantic corrections are allowed after `Ready`.
 
 ## Handoff and Follow-ups
 
-- Current state: Draft. Nothing written yet. The baseline and the ledger are in
-  place, so this task has everything it needs to start.
-- Next recommended step: read `extraction/ledger.md` end to end before writing
-  anything, and check whether the CORE set is coherent as a whole rather than
-  requirement by requirement.
-- Blockers: none.
+- Current state: Draft. The specification is unwritten. DFC-0002 is complete;
+  the necessity gate applies to this task before its future freeze.
+- Next recommended step: resolve the pre-freeze inconsistencies below and
+  revalidate the gate, then draft requirement groups from the full CORE set.
+- Blockers: the pre-freeze mapping and authority inconsistencies below.
 - Child tasks: none.
+- Follow-up: the completed DFC-0002 record contains adoption verification;
+  no pilot prerequisite or additional adoption task remains.
 - Resume condition: not applicable.
 - Open questions: whether filenames are normative or only semantic roles are.
   The answer changes whether a renamed template breaks conformance, and it is
   listed as an open decision in `docs/PROJECT_BRIEF.md`.
+- Pre-freeze reconciliation: the ledger has twenty CORE rows, including shared
+  C-07 and C-18 destinations and a C-13/C-14 split, while this Draft charter
+  requires one row per requirement. Resolve the mapping while the charter is
+  editable. Also reconcile the open filename decision with the system document's
+  assertion that roles are normative, and the identity register's allocation-only
+  rule with its existing `Work` column. These are existing bootstrap gaps
+  left with this Draft; they were outside DFC-0002.
 
 ## Finalize When Complete
 
