@@ -26,7 +26,8 @@ by records that cannot be edited.
 
 ## Claims
 
-| Task ID | Title | Owner | Claimed | Work |
-| --- | --- | --- | --- | --- |
-| DFC-0001 | protocol specification, C-01 to C-18 | unassigned | 2026-08-19 | not started |
-| DFC-0002 | core contract and necessity gate | Codex | 2026-09-05 | — |
+| Task ID | Title | Owner | Claimed |
+| --- | --- | --- | --- |
+| DFC-0001 | protocol specification, C-01 to C-18 | unassigned | 2026-08-19 |
+| DFC-0002 | core contract and necessity gate | Codex | 2026-09-05 |
+| DFC-0003 | atomic authority ownership and current-state precedence | A008 operator | 2026-09-20 |

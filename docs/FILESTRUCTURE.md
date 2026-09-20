@@ -21,14 +21,16 @@ docs-first_continuity-protocol/
 │   ├── adr/                        decisions
 │   │   ├── README.md               decision index and status
 │   │   ├── 0001-apache-2.0-open-source-distribution.md
-│   │   └── 0002-core-contract-and-necessity-gate.md  accepted adoption
+│   │   ├── 0002-core-contract-and-necessity-gate.md  accepted adoption
+│   │   └── 0003-atomic-semantic-ownership.md  accepted ownership precedence
 │   ├── backlog/                    non-activated proposals
 │   │   ├── README.md               proposal index and status
 │   │   └── core-contract-and-implementation-gate.md  provenance and review fixtures
 │   ├── paused/                     frozen parents awaiting a condition
 │   ├── finished/                   archived tasks, immutable
 │   │   ├── README.md               archive naming convention
-│   │   └── DFC-0002_core-contract-and-necessity-gate.md  completed adoption
+│   │   ├── DFC-0002_core-contract-and-necessity-gate.md  completed adoption
+│   │   └── DFC-0003_atomic-authority-ownership.md  completed ownership precedence
 │   └── concepts_sandbox/           excluded ideas, never authority
 ├── baseline/
 │   ├── README.md                   provenance and what was not copied

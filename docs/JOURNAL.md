@@ -4,6 +4,35 @@ Newest first. Append only: entries are never edited or reflowed, because other
 records cite them and because their value is that they record what was believed
 at the time.
 
+## 2026-09-20 — DFC-0003: atomic semantic ownership adopted
+
+- Date: 2026-09-20
+- Author: A008 operator
+- Task: DFC-0003
+- Branch: `operator/dfc-0003-atomic-authority-state`
+- Decision: `docs/adr/0003-atomic-semantic-ownership.md` is Accepted. For a
+  semantic concern, the current owning state is truth. An authorized later
+  state changes only its matching boundary atomically; earlier ADRs, finished
+  tasks and journal entries remain immutable history and provenance.
+- Change: CC-01 in `docs/PROJECT_BRIEF.md` owns the required outcome;
+  `docs/TASK_WORKFLOW.md` owns the current-state operating procedure; and
+  `docs/SYSTEMDOC.md` explains the durable model. The ADR index, current status
+  and file map identify the delivered state. DFC-0001 is restored as its
+  separate Draft and records that it must give the adopted rule ADR provenance,
+  not present it as a frozen-baseline CORE row.
+- Verification: manual scenario review covered same-concern replacement,
+  partial supersession, unrelated concerns, later historical descriptions and
+  stale retrieved records. Live Markdown references and fences were reviewed;
+  `git diff --check` passed. Final review found no runtime, registry, database,
+  graph engine or storage service.
+- Not verified: independent newcomer behavior, runtime behavior, long-term
+  effectiveness, remote identity visibility, push, release or announcement. No
+  protocol-conformance claim is made.
+- Continuity: `docs/finished/DFC-0003_atomic-authority-ownership.md` contains
+  the frozen charter, scenario verdicts and completion record. Resume DFC-0001
+  only after resolving its recorded pre-freeze gaps.
+- Signature: A008 operator
+
 ## 2026-09-05 — DFC-0002: core contract and necessity gate adopted
 
 - Date: 2026-09-05

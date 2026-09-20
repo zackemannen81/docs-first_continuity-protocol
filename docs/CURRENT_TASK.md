@@ -134,6 +134,11 @@ section adds the operating requirement adopted in DFC-0002.
   `docs/finished/DFC-0002_core-contract-and-necessity-gate.md`. Apply the gate
   before this Draft becomes Ready. The new operating rule is not an extracted
   requirement and must not be inserted into the baseline ledger as one.
+- DFC-0003 adopted atomic semantic ownership/current-state precedence under
+  `docs/adr/0003-atomic-semantic-ownership.md`. When specification work resumes,
+  transcribe this adopted rule as a requirement with ADR 0003 provenance, not as
+  a baseline CORE row. It does not alter this Draft's baseline-transcription
+  goal, scope or frozen-state conditions; revalidate the Draft before Ready.
 - Transcription, not redesign. A rewrite from memory keeps the parts that read
   well and drops the failure knowledge that is the actual value.
 - Requirement identifiers are permanent. They will appear in conformance output,
