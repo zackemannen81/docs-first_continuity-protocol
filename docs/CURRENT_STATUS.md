@@ -1,6 +1,6 @@
 # Current Status
 
-Reality as of 2026-09-05. This document describes what exists, not what is
+Reality as of 2026-09-20. This document describes what exists, not what is
 planned. If it disagrees with the code or the tree, this document is wrong and
 must be corrected.
 
@@ -14,6 +14,7 @@ must be corrected.
 | This repository's own docs-first instance | Complete and operating: entry point, active task, workflow, brief, status, system document, journal, file map, identity register, collection indexes |
 | `LICENSE` and public source repository | Open source under the Apache License 2.0; publication is a technical preview, not a versioned protocol release or conformance claim |
 | Core Contract in `docs/PROJECT_BRIEF.md`, accepted ADR 0002 | Approved current outcomes with stable local CC-01 through CC-05 references; provenance distinct from baseline extraction |
+| Atomic semantic ownership/current-state precedence, accepted ADR 0003 | Adopted operating rule: current owning state is truth for a semantic concern; authorized later state atomically replaces only the changed boundary while prior records remain immutable provenance |
 | Necessity Gate in `docs/TASK_WORKFLOW.md` and the local task template | Adopted operating rule: changes require contract necessity and task scope, with checks before Ready, on material changes and at completion |
 | `docs/finished/DFC-0002_core-contract-and-necessity-gate.md` | Completed adoption, with necessity arguments, twelve manual scenario verdicts and bounded documentation verification; self-review, not runtime or independent adoption evidence |
 

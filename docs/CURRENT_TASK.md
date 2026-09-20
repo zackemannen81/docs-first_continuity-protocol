@@ -1,12 +1,12 @@
 # Current Task
 
-Task ID: DFC-0003
+Task ID: DFC-0001
 Parent Task: None
-Status: Ready
-Owner: A008 operator
-Created: 2026-09-20
-Last updated: 2026-09-20
-Charter frozen at: 2026-09-20
+Status: Draft
+Owner: unassigned
+Created: 2026-08-19
+Last updated: 2026-09-05
+Charter frozen at:
 
 ## Read First
 
@@ -18,153 +18,186 @@ Charter frozen at: 2026-09-20
 - `docs/SYSTEMDOC.md`
 - `docs/JOURNAL.md`
 - `docs/FILESTRUCTURE.md`
-- Relevant records under `docs/adr/`
-- The pre-existing DFC-0001 Draft on `main`; this task must not erase or redefine that separate specification task.
+- `baseline/README.md` and `extraction/ledger.md`
 
 ## Task Summary
 
-Make authority in docs-first follow the same atomic ownership rule as durable state: for a given semantic concern, **the current owning state is the truth**. When a later authorized task or decision changes that same concern, the later state atomically takes ownership and the previous state becomes history/provenance.
+Write `SPEC.md`: the normative requirements of the protocol, numbered so that
+conformance results, issues and profiles can cite them precisely.
 
-Older ADRs, finished tasks and journal records remain immutable evidence of what previously applied. They must not continue to compete as parallel current authority after a later authorized decision has replaced the same semantic state.
+The material already exists. `baseline/acme-2026-08-19/` holds the hardened
+model verbatim and `extraction/ledger.md` classifies twenty-eight rule groups as
+CORE, PROFILE or PROJECT with an intended destination for each. This task turns
+the CORE rows into requirements without softening them, and leaves the PROFILE
+rows for the profile documents.
+
 ## Task Charter
+
+The charter is editable while status is `Draft` and immutable once status is
+`Ready`.
 
 ### Goal
 
-Define and adopt atomic semantic ownership and current-state precedence as a core continuity rule, so a competent successor can answer “what applies now?” without reconciling a pile of historically valid but mutually incompatible records.
+Produce the normative specification of the protocol core, traceable rule by rule
+to the baseline it came from.
 
 ### Primary Deliverable
 
-An accepted protocol decision plus the smallest changes to the Core Contract, task workflow and owning documentation needed to establish:
-
-1. one current owner/state per semantic concern;
-2. later authorized state on the same concern takes ownership;
-3. prior state remains immutable history/provenance;
-4. partial replacement affects only the semantic boundary actually changed;
-5. time/order is part of authority resolution;
-6. historical records never regain current authority merely because retrieval finds them.
+`SPEC.md`, containing numbered requirements grouped by entry and ownership,
+active work, continuity, containment, addressing, multiple actors and
+resumability, together with the conformance levels that map onto them.
 
 ### In Scope
 
-- Record the 2026-09-20 owner direction as an explicit protocol decision.
-- Refine the Core Contract, primarily the “find the authority” outcome, so current authority and historical authority cannot be confused.
-- Define a semantic concern/address narrowly enough that two unrelated decisions may coexist while two sequential decisions about the same concern cannot both be current.
-- Require an authorized later task/decision changing the same concern to atomically update the current owning state/documentation in the same change.
-- Preserve the prior ADR/task/journal record unchanged as history/provenance.
-- Define partial supersession: a later decision may take ownership of one clause/boundary without falsely invalidating unrelated parts of the older record.
-- Make temporal/order semantics explicit: later authorized state wins for the same concern unless the later record explicitly describes historical state rather than changing current state.
-- Update protocol guidance so agents resolve current truth from the current owner first and use historical records to explain how that state was reached.
-- Feed the adopted rule into the still-Draft DFC-0001 specification task without silently rewriting that task’s goal.
+- Write one requirement per CORE row in `extraction/ledger.md`, keeping the
+  force of the baseline rule and parameterizing only project identity.
+- Group requirements and assign stable identifiers. An identifier, once written,
+  is cited by conformance output and may not be renumbered.
+- Define the conformance levels and state which requirements each level covers,
+  and by what means each is checked: validator, git history, or a named review
+  ritual.
+- State, for every requirement, whether it is machine-checkable or ritual-checked.
+  A requirement that is neither does not belong in the specification.
+- Mark the four requirements whose baseline rules are hours old rather than
+  months, so that a reader can weigh them accordingly.
+- Update `extraction/ledger.md` so every CORE row names the requirement it
+  became.
+- Update `docs/CURRENT_STATUS.md` and `docs/FILESTRUCTURE.md`.
+
 ### Out of Scope
 
-- A runtime service, database, graph engine or semantic-memory implementation.
-- A global hash/version scheme for documents.
-- Requiring every historical ADR to be rewritten.
-- Deleting or mutating immutable finished tasks, ADR history or journal entries.
-- Treating recency alone as authority when a later record is not authorized to own the concern.
-- Making every document a competing source that must be re-reconciled on each read.
-- Renaming stable cited files.
-- Solving unrelated open decisions such as final project name or normative filenames.
-- Expanding DFC-0001 beyond incorporating the adopted ownership rule into its future specification work.
+- Templates, profiles, the validator, examples, case studies, the evidence
+  report. Each is its own task.
+- Editing anything under `baseline/`.
+- Choosing the final project name or changing the accepted Apache-2.0 license.
+- Publishing a versioned protocol release.
+- Simplifying or merging baseline rules. If a rule seems redundant, record the
+  observation in `docs/backlog/` rather than dropping it; the model was hardened
+  by failures that the text does not always show.
 
 ### Definition of Done
 
-- The protocol states plainly that current owning state is the truth for a semantic concern.
-- A later authorized decision changing the same concern replaces the previous current state atomically; the previous value remains historical provenance.
-- An older ADR cannot override a later authorized task/decision merely because both are retrieved or cited.
-- Partial supersession is representable without declaring an entire older record invalid.
-- The protocol distinguishes “historically correct” from “currently authoritative”.
-- A newcomer can resolve a two-record contradiction by ownership + semantic address + order, without subjective document voting.
-- The rule is reflected in Core Contract/workflow/system documentation and queued for DFC-0001 specification transcription.
-- No new runtime/storage mechanism is introduced.
+- Every CORE row in the ledger names the requirement it became, and every
+  requirement names the ledger row it came from.
+- Each requirement states its checking means.
+- The conformance levels cover every requirement exactly once.
+- The specification is readable in one sitting.
+- `docs/CURRENT_STATUS.md` no longer says the specification does not exist.
+- `docs/JOURNAL.md` has a signed entry and this task is archived.
+
 ### Necessity Gate
 
 Contract: `docs/PROJECT_BRIEF.md`, Core Contract
-Contract revision: `6bd0a8ae0787c441a87576403ce4ac264663580f`
+Contract revision: `6bd0a8ae0787c441a87576403ce4ac264663580f`.
+
+This Draft must be revalidated before Ready under `docs/TASK_WORKFLOW.md`.
+The original baseline-transcription goals and boundaries are unchanged; this
+section adds the operating requirement adopted in DFC-0002.
 
 | Change | Clause and accepted constraint | Outcome; consequence if omitted | Smallest sufficient change | Planned check |
 | --- | --- | --- | --- | --- |
-| Adopt current-state authority precedence | CC-01 — Find the authority; owner direction 2026-09-20 | A newcomer can otherwise find several historically valid contradictory records and still not know what applies now | Add one explicit semantic ownership/precedence rule and update current owning docs in the same change | Scenario review with older ADR + later authorized task changing the same concern |
-| Preserve immutable history without parallel authority | CC-03 and CC-05 — usable handoff and inspectable claims | Deleting old decisions destroys provenance, while treating them as still-current makes the repository ambiguous | Keep historical records immutable; mark current ownership in current state/decision surfaces and explicit replacement links/wording only where needed | Review partial replacement and historical traceability scenarios |
-| Keep the rule bounded and non-runtime | Core Contract: agent-neutral/domain-neutral continuity protocol; non-goal of runtime framework | An implementation-heavy authority graph would recreate the complexity this rule is intended to remove | Documentation/specification semantics only; no database/service/version engine | Final diff review for absence of runtime/storage mechanisms |
+| Transcribe the CORE ledger into the specification | CC-05; baseline provenance and the existing transcription charter | Make each requirement's origin and checking means inspectable; without the specification conformance cannot be evaluated | Numbered text and bidirectional ledger mapping, with no new rules presented as baseline extraction | Review ledger/specification mapping, checking means and conformance coverage |
+| Record the verified result and handoff | CC-01, CC-03, CC-04 | Keep availability, location and remaining work accurate; otherwise a successor cannot distinguish delivered requirements from plans | Update the existing owning documents, journal and task archive | Reference/fence review, final diff review and named verification omissions |
 
 ### Minimum Verification Gates
 
-- [ ] Scenario: ADR A says X; later authorized task/decision says Y for the same concern; current authority resolves to Y and X remains historical.
-- [ ] Scenario: later decision changes only one clause of an older ADR; unrelated clauses retain their current ownership.
-- [ ] Scenario: two records about different semantic concerns coexist without false supersession.
-- [ ] Scenario: a historical description written later does not become current merely because its file/commit is newer.
-- [ ] Scenario: a stale retrieved ADR cannot override the current owner.
-- [ ] Review DFC-0001 Draft impact and record exactly how the new rule enters its future specification work without redefining that task.
-- [ ] Manual link/fence review and `git diff --check`.
-- [ ] Final Necessity Gate review against actual diff.
+- [ ] Every CORE ledger row maps to exactly one requirement, checked by reading
+      the ledger end to end
+- [ ] Every requirement maps back to a ledger row
+- [ ] Manual link and fence review, since this repository has no tooling yet
+- [ ] `git diff --check` clean
+
 ## References
 
-- `docs/PROJECT_BRIEF.md` CC-01, CC-03, CC-05
-- `docs/TASK_WORKFLOW.md`
-- `docs/SYSTEMDOC.md`
-- `docs/adr/README.md`
-- `docs/finished/DFC-0002_core-contract-and-necessity-gate.md`
-- DFC-0001 Draft on `main`
-- Owner direction recorded 2026-09-20 in this charter.
-- A008-0143 is an implementation-specific sibling task and is not protocol authority; this DFC task generalizes only the continuity/ownership principle.
+- `baseline/acme-2026-08-19/AGENTS.md`
+- `baseline/acme-2026-08-19/docs/TASK_WORKFLOW.md`
+- `extraction/ledger.md`
 
 ## Checklist
 
-- [ ] Re-read current authority rules and identify every place where old and new decisions can appear to remain concurrently authoritative.
-- [ ] Write failing/resolution scenarios before changing protocol text.
-- [ ] Record the explicit decision adopting atomic semantic ownership/current-state precedence.
-- [ ] Update Core Contract and workflow with the smallest sufficient wording.
-- [ ] Update SYSTEMDOC/CURRENT_STATUS as observed protocol state changes.
-- [ ] Define partial supersession and historical provenance without inventing a new registry/database.
-- [ ] Record how DFC-0001 Draft must consume the adopted rule when specification work resumes.
-- [ ] Run scenario review, link/fence review and `git diff --check`.
-- [ ] Review final diff against scope and remove/reroute unrelated architecture.
-- [ ] Archive/handoff and restore the pre-existing DFC-0001 Draft as the branch’s next current task before integration.
+- [x] Confirm DFC-0001 is claimed on `main` before freezing this charter
+      (verified at `6b59508` on 2026-09-05; owner remains unassigned)
+- [ ] Revalidate the Necessity Gate and resolve the recorded pre-freeze gaps
+- [ ] Draft the requirement groups and identifiers
+- [ ] Write one requirement per CORE ledger row
+- [ ] Assign checking means to each requirement
+- [ ] Define the conformance levels
+- [ ] Mark the recently added requirements
+- [ ] Backfill the ledger with requirement identifiers
+- [ ] Update status and file structure
+- [ ] Add a signed journal entry and archive this task
 
 ## Decisions and Notes
 
-- Owner decision, 2026-09-20: **state = truth**. For the same semantic concern, a later authorized update takes current ownership atomically; the previous state becomes history.
-- “Later” alone is not enough. The later record must be authorized to own/change that semantic concern.
-- History is not wrong merely because it is no longer current.
-- ADRs are historical decision records, not immortal parallel truth. A later authorized task/decision can take ownership of the same boundary.
-- Partial replacement is preferred over pretending an entire older ADR is invalid when only one decision changed.
-- Current-state lookup must not require subjective voting across all retrieved documentation.
-- Keep this rule simple: semantic address/concern + current owner/state + ordered history/provenance.
-- Git/HEAD analogy: with one `main`, a change starts from current HEAD, changes only the affected files, and commits a new HEAD. The new HEAD is current truth; prior commits remain immutable history. Docs-first authority must work the same way per semantic concern: later authorized state becomes current ownership, while older decisions remain provenance rather than parallel current truth.
+- DFC-0002 adopted the Core Contract and Necessity Gate under accepted ADR
+  0002. Its completed record is
+  `docs/finished/DFC-0002_core-contract-and-necessity-gate.md`. Apply the gate
+  before this Draft becomes Ready. The new operating rule is not an extracted
+  requirement and must not be inserted into the baseline ledger as one.
+- DFC-0003 adopted atomic semantic ownership/current-state precedence under
+  `docs/adr/0003-atomic-semantic-ownership.md`. When specification work resumes,
+  transcribe this adopted rule as a requirement with ADR 0003 provenance, not as
+  a baseline CORE row. It does not alter this Draft's baseline-transcription
+  goal, scope or frozen-state conditions; revalidate the Draft before Ready.
+- Transcription, not redesign. A rewrite from memory keeps the parts that read
+  well and drops the failure knowledge that is the actual value.
+- Requirement identifiers are permanent. They will appear in conformance output,
+  issue titles and profile documents, and those citations cannot be repaired
+  afterwards.
+- If a rule cannot be classified confidently as CORE, it is PROFILE. The core
+  stays small; a profile rule can be promoted later, but a core rule that turns
+  out to be local is expensive to remove.
+- Repository publication and Apache-2.0 licensing were settled outside this
+  task by the owner and are recorded in
+  `docs/adr/0001-apache-2.0-open-source-distribution.md`. DFC-0001 neither
+  chooses nor changes that boundary.
+
 ## Charter Amendment Log
 
-- none
+Only non-semantic corrections are allowed after `Ready`.
+
+-none
 
 ## Verification
 
-- [ ] Record scenario-review results.
-- [ ] Record exact documents/clauses updated.
-- [ ] Record `git diff --check`.
-- [ ] Record any skipped checks and reasons.
+- [ ] Ledger and specification cross-check, both directions
+- [ ] Manual link and fence review
+- [ ] `git diff --check`
+- [ ] Document skipped checks and reasons
 
 ## Documentation Updates
 
-- [ ] `docs/PROJECT_BRIEF.md`
-- [ ] `docs/TASK_WORKFLOW.md`
-- [ ] `docs/SYSTEMDOC.md`
 - [ ] `docs/CURRENT_STATUS.md`
-- [ ] relevant ADR/index documentation
-- [ ] DFC-0001 Draft follow-through note/inputs, without changing its frozen state because it remains Draft
+- [ ] `docs/FILESTRUCTURE.md`
 - [ ] `docs/JOURNAL.md`
-- [ ] `docs/FILESTRUCTURE.md` only if structure changes
+- [ ] `extraction/ledger.md`
 
 ## Handoff and Follow-ups
 
-- Current state: Ready on dedicated DFC-0003 branch.
-- Next recommended step: implement the decision/document changes before DFC-0001 is frozen, then restore DFC-0001 as current Draft for specification work.
-- Blockers: DFC-0002 completed branch is the current governance baseline; integrate in normal operator order before final DFC-0003 integration if main has not yet received it.
-- Child tasks: none at freeze.
-- Resume condition: revalidate against the current Core Contract if DFC-0002 or DFC-0001 changes materially first.
-- Open questions: exact wording/placement of partial supersession metadata may be refined within this charter, but no new authority registry or runtime may be introduced.
+- Current state: Draft. The specification is unwritten. DFC-0002 is complete;
+  the necessity gate applies to this task before its future freeze.
+- Next recommended step: resolve the pre-freeze inconsistencies below and
+  revalidate the gate, then draft requirement groups from the full CORE set.
+- Blockers: the pre-freeze mapping and authority inconsistencies below.
+- Child tasks: none.
+- Follow-up: the completed DFC-0002 record contains adoption verification;
+  no pilot prerequisite or additional adoption task remains.
+- Resume condition: not applicable.
+- Open questions: whether filenames are normative or only semantic roles are.
+  The answer changes whether a renamed template breaks conformance, and it is
+  listed as an open decision in `docs/PROJECT_BRIEF.md`.
+- Pre-freeze reconciliation: the ledger has twenty CORE rows, including shared
+  C-07 and C-18 destinations and a C-13/C-14 split, while this Draft charter
+  requires one row per requirement. Resolve the mapping while the charter is
+  editable. Also reconcile the open filename decision with the system document's
+  assertion that roles are normative, and the identity register's allocation-only
+  rule with its existing `Work` column. These are existing bootstrap gaps
+  left with this Draft; they were outside DFC-0002.
 
 ## Finalize When Complete
 
-- Archive as `docs/finished/DFC-0003_atomic-authority-ownership.md`.
-- Restore the pre-existing DFC-0001 Draft as `docs/CURRENT_TASK.md` before final integration.
-- Add signed `docs/JOURNAL.md` entry.
-- Push/open PR; do not merge from a worker.
+- Archive this file under `docs/finished/`.
+- Restore this template or populate the next approved task.
+- Add a signed `docs/JOURNAL.md` entry.
+- If Goal or Definition of Done changed, supersede this task instead of
+  rewriting it.

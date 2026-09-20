@@ -30,7 +30,11 @@ records another competent actor can find and use.
 
 - **CC-01 — Find the authority.** From the entry point, find the active task
   and its relevant owning records; distinguish approved direction, current
-  reality, history and undecided material.
+  reality, history and undecided material. For each semantic concern, the
+  current owning state is the truth: an authorized later state that changes the
+  same concern atomically replaces only that concern's prior current state.
+  Prior records remain immutable history and provenance; retrieval, citation or
+  recency alone never restores them as current authority.
 - **CC-02 — Keep work necessary and bounded.** Changes serve the current
   approved purpose. Each branch holds at most one active task; its charter
   remains fixed after Ready. Discoveries receive an explicit route instead of

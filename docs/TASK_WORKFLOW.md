@@ -96,6 +96,28 @@ references and evidence exist; they cannot prove a change is necessary. Existing
 safety obligations still apply. A separate pilot or evidence programme is not
 a prerequisite for applying this adopted rule.
 
+## Current-state ownership
+
+For a semantic concern, the current owning state is the truth. A semantic
+concern is the smallest independently changeable boundary of a rule, outcome,
+policy, decision or factual assertion. It must be stated narrowly enough that
+unrelated concerns can coexist, and broadly enough that sequential states of
+one concern cannot both be current.
+
+An authorized task or decision that changes a concern must update that concern's
+current owner/state atomically in the same change. The later state takes current
+ownership only for the boundary it changes; unrelated boundaries in earlier
+records retain their own current ownership. The earlier record remains
+immutable history/provenance. A later record that explicitly describes history,
+rather than changes the current concern, does not take ownership merely because
+it is newer.
+
+Resolve an apparent conflict by locating the current owner, matching the
+semantic concern, and then following authorized order. Do not vote among
+retrieved records, and do not let a cited or retrieved historical ADR, finished
+task or journal entry regain current authority. Use such records to explain how
+the current state was reached.
+
 ## Task Identity
 
 A task identity is an address. It appears in the active charter, the archive

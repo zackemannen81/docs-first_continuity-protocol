@@ -81,6 +81,23 @@ and the active charter names its deliverables before they exist; both
 legitimately cite paths that do not resolve, and both should report without
 gating.
 
+## Current-state authority
+
+For each semantic concern, one current owning state is the truth. A semantic
+concern is the smallest independently changeable boundary of a rule, outcome,
+policy, decision or factual assertion. Current truth is resolved by the current
+owner, the matching concern and authorized order—not by voting among every
+retrieved record.
+
+When an authorized later task or decision changes a concern, it atomically
+updates the current owning document in the same change and takes ownership of
+only the affected boundary. An older ADR, archived task or journal entry remains
+immutable history/provenance. It may explain why the current state exists, but
+cannot regain current authority through retrieval, citation or age. A later
+historical description likewise does not take current ownership merely because
+it is newer. Partial supersession leaves unrelated boundaries in the older
+record under their existing current owners.
+
 ## Identity allocation
 
 Identities are claimed on the trunk before a charter freezes, in a strictly
@@ -129,6 +146,12 @@ distinct from intended baseline C-series requirements. The gate requires both
 product necessity and frozen task scope, with revalidation for material changes
 and final review of the actual changes. Filled fields do not prove semantics.
 There is no new runtime, lifecycle state or mandatory pilot phase.
+
+Current-state precedence is adopted under
+`docs/adr/0003-atomic-semantic-ownership.md`: the current owning state resolves
+what applies for a semantic concern, while immutable historical records explain
+how that state was reached. It introduces no registry, database or retrieval
+service.
 
 `docs/backlog/core-contract-and-implementation-gate.md` retains preparation
 provenance and synthetic review fixtures; it is not a second owner of the rule.
