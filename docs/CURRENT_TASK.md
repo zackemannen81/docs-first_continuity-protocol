@@ -130,6 +130,7 @@ Contract revision: `6bd0a8ae0787c441a87576403ce4ac264663580f`
 - Partial replacement is preferred over pretending an entire older ADR is invalid when only one decision changed.
 - Current-state lookup must not require subjective voting across all retrieved documentation.
 - Keep this rule simple: semantic address/concern + current owner/state + ordered history/provenance.
+- Git/HEAD analogy: with one `main`, a change starts from current HEAD, changes only the affected files, and commits a new HEAD. The new HEAD is current truth; prior commits remain immutable history. Docs-first authority must work the same way per semantic concern: later authorized state becomes current ownership, while older decisions remain provenance rather than parallel current truth.
 ## Charter Amendment Log
 
 - none
